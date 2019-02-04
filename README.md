@@ -46,7 +46,7 @@ iperf3 -c <server ip>
 ## Tools 
 
 2. dd & Netcat
-* Copies data between two servers and returns data measured
+* Copies data between two servers and measures data transfered
 
 
 ### Install
