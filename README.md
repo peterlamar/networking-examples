@@ -199,7 +199,7 @@ which will resemble the following:
 
 ### Install
 
-Ping should typically be installed
+Ping will typically be already installed in most Linux distros
 
 ```Bash
 $ sudo apt install iputils-ping	#Debian/Ubuntu
