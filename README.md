@@ -1,7 +1,10 @@
 # network-performance-tools
 Documentation on network tools useful for quick performance analysis by ordinary developers. 
 
-## Tools 
+1. [iperf3](#iperf3)
+2. [dd+Netcat](#dd+Netcat)
+
+## iperf3 
 
 1. [iperf3](https://github.com/esnet/iperf)
 * Traditional network tool used to examine network throughput performance between two servers. When run, it returns data transfered, bandwidth, packet loss and related statistics over a TCP connection. 
@@ -43,7 +46,7 @@ iperf3 -c <server ip>
 * Man [page](https://fasterdata.es.net/performance-testing/network-troubleshooting-tools/iperf/)
 
 
-## Tools 
+## dd+Netcat 
 
 2. dd & Netcat
 * Copies data between two servers and measures data transfered
