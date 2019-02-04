@@ -23,10 +23,10 @@ $ sudo dnf install iperf3	#Fedora 22+
 iperf3 -s
 ```
 
-2. Connect to the server with your laptop or some other client and observe network performance statistics
+2. Connect to the server FROM your laptop or some other client and observe network performance statistics
 
 ```Bash
-iperf3 -c 
+iperf3 -c <server ip>
 ```
 
 ![iperf](https://github.com/peterlamar/network-performance-tools/blob/master/img/iperf3.png)
