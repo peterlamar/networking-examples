@@ -33,9 +33,11 @@ iperf3 -c <server ip>
 ![iperf](https://github.com/peterlamar/network-performance-tools/blob/master/img/iperf3.png)
 
 ### Pros
-Mature tool, been around since 2008
+* Mature tool, been around since 2008
+
 ### Cons 
-Can be difficult to install on older machines which do not support iperf dependencies in thier kernel Centos < 7
+* Can be difficult to install on older servers which do not support iperf dependencies in thier kernel Centos < 7
 
 ### Reference
-Advanced [usage](https://www.tecmint.com/test-network-throughput-in-linux/)
+* Advanced [usage](https://www.tecmint.com/test-network-throughput-in-linux/)
+* Man [page](https://fasterdata.es.net/performance-testing/network-troubleshooting-tools/iperf/)
