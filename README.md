@@ -37,5 +37,4 @@ Mature tool, been around since 2008
 Can be difficult to install on older machines which do not support iperf dependencies in thier kernel Centos < 7
 
 ### Reference
-
-https://www.tecmint.com/test-network-throughput-in-linux/
+Advanced [usage](https://www.tecmint.com/test-network-throughput-in-linux/)
