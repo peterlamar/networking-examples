@@ -1,23 +1,25 @@
-# network-diagnosis-tools
+# Network Tools
 Documentation on network tools useful for quick performance analysis by ordinary developers. These tools are for diagnosising network issues between two servers that you suspect there may be a problem at. 
 
-Throughput tools - i.e. how much data can get there and does any of it get lost? 
+## Throughput 
+- i.e. how much data can get there and does any of it get lost? 
 
 1. [iperf3](#iperf3)
 2. [dd Netcat](#dd-Netcat)
 
-Connectivity tools - i.e. is there a route from x to y and what are the stops between them?
+## Connectivity 
+- i.e. is there a route from x to y and what are the stops between them?
 
 3. [traceroute](#traceroute)
 
-## iperf3 
+### iperf3 
 
 1. [iperf3](https://github.com/esnet/iperf)
 * Traditional network tool used to examine network throughput performance between two servers. When run, it returns data transfered, bandwidth, packet loss and related statistics over a TCP connection. 
 * Language - C
 * Authors - Esnet @ Berkeley
 
-### Install
+#### Install
 
 ```Bash
 $ sudo apt install iperf3	#Debian/Ubuntu
@@ -25,7 +27,7 @@ $ sudo yum install iperf3	#RHEL/CentOS
 $ sudo dnf install iperf3	#Fedora 22+ 
 ```
 
-### Usage
+#### Usage
 
 1. Start an iperf3 server in the suspected machine 
 
@@ -41,24 +43,24 @@ iperf3 -c <server ip>
 
 ![iperf](https://github.com/peterlamar/network-performance-tools/blob/master/img/iperf3.png)
 
-### Pros
+#### Pros
 * Mature tool, been around since 2008
 
-### Cons 
+#### Cons 
 * Can be difficult to install on older servers which do not support iperf dependencies in thier kernel Centos < 7
 
-### Reference
+#### Reference
 * Advanced [usage](https://www.tecmint.com/test-network-throughput-in-linux/)
 * Man [page](https://fasterdata.es.net/performance-testing/network-troubleshooting-tools/iperf/)
 
 
-## dd Netcat 
+### dd Netcat 
 
 2. dd & Netcat
 * Copies data between two servers and measures data transfered
 
 
-### Install
+#### Install
 
 dd typically comes installed in Linux
 
@@ -68,7 +70,7 @@ $ sudo yum install netcat	#RHEL/CentOS
 $ sudo dnf install netcat	#Fedora 22+ 
 ```
 
-### Usage
+#### Usage
 
 1. Start an netcat server in the suspected machine 
 
@@ -88,24 +90,24 @@ dd if=/dev/zero bs=1024K count=512 | nc -v <server ip> 2222
 27262976 bytes (27 MB, 26 MiB) copied, 53.4426 s, 510 kB/s
 ```
 
-### Pros
+#### Pros
 * More likely to be installed already
 
-### Cons 
+#### Cons 
 * Limited in functionality, truly basic test. 
 
-### Reference
+#### Reference
 * Difference between GNU and BSD [netcat](https://www.quora.com/What-is-the-difference-between-the-openBSD-netcat-and-the-GNU-netcat)
 * Linux IO with [dd](https://www.thomas-krenn.com/en/wiki/Linux_I/O_Performance_Tests_using_dd)
 
-## traceroute 
+### traceroute 
 
 3. [traceroute](https://github.com/openbsd/src/blob/master/usr.sbin/traceroute/traceroute.c)
 * Tracks steps or hops between the source computer and the ip/url entered. Sends three packets to each computer and measures return time. 
 * Language - C
 * Authors - Linux/OpenBSD
 
-### Install
+#### Install
 
 ```Bash
 $ sudo apt install traceroute	#Debian/Ubuntu
@@ -113,7 +115,7 @@ $ sudo yum install traceroute	#RHEL/CentOS
 $ sudo dnf install traceroute	#Fedora 22+ 
 ```
 
-### Usage
+#### Usage
 
 1. Run a traceroute to the server url or ip in question
 
@@ -135,11 +137,11 @@ traceroute 8.8.8.8
 * Domain/IP - IP address or domain of the router. Can appear as * * * if router will not reveal itself
 * RTT columns - Display round trip time (RTT) for the packet to reach router and return to your computer. Listed in three columns and sent three times to guage consistency. Look for wildly different times when looking for problems. 
 
-### Pros
+#### Pros
 * Likely to be already installed
 
-### Cons 
+#### Cons 
 * Typically difficult to act on knowledge if hops are in a network outside of your control. 
 
-### Reference
+#### Reference
 * More [detail](https://www.inmotionhosting.com/support/website/how-to/read-traceroute)
