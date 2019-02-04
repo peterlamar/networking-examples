@@ -1,6 +1,8 @@
 # network-performance-tools
 Documentation on network tools useful for quick performance analysis by ordinary developers. These tools are for diagnosising netowrk issues between two servers that you suspect there may be a problem at. 
 
+Throughput tools - i.e. how much data can get there and does any of it get lost? 
+
 1. [iperf3](#iperf3)
 2. [dd Netcat](#dd-Netcat)
 
