@@ -2,13 +2,13 @@
 Documentation on network tools useful for quick performance analysis by ordinary developers. These tools are for diagnosising network issues between two servers that you suspect there may be a problem at. 
 
 ### Throughput 
-- i.e. how much data can get there and does any of it get lost? 
+- i.e. how much data can get there and how much gets lost? 
 
 1. [iperf3](#iperf3) - Creates client/server between two network computers and measures throughput
 2. [dd Netcat](#dd-Netcat) - Copies files between two network computers and measures file transfer (throughput)
 
 ### Connectivity 
-- i.e. is there a route from x to y and what are the stops between them?
+- i.e. is there a route from x to y and what are the stops between them? Any issues between x and y?
 
 3. [traceroute](#traceroute) - Tracks all computers between two locations and measures round trip of three packets to each
 4. [mtr](#mtr) - Sends packets to all computers between two locations and reports lost percentage and statistics on packet round trip times
