@@ -29,7 +29,7 @@ iperf3 -s
 iperf3 -c 
 ```
 
-
+![iperf](https://github.com/peterlamar/network-performance-tools/blob/master/img/iperf3.png)
 
 ### Pros
 Mature tool, been around since 2008
