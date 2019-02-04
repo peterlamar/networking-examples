@@ -6,6 +6,10 @@ Throughput tools - i.e. how much data can get there and does any of it get lost?
 1. [iperf3](#iperf3)
 2. [dd Netcat](#dd-Netcat)
 
+Connectivity tools - i.e. is there a route from x to y and what are the stops between them?
+
+3. [traceroute](#traceroute)
+
 ## iperf3 
 
 1. [iperf3](https://github.com/esnet/iperf)
@@ -93,3 +97,48 @@ dd if=/dev/zero bs=1024K count=512 | nc -v <server ip> 2222
 ### Reference
 * Difference between GNU and BSD [netcat](https://www.quora.com/What-is-the-difference-between-the-openBSD-netcat-and-the-GNU-netcat)
 * Linux IO with [dd](https://www.thomas-krenn.com/en/wiki/Linux_I/O_Performance_Tests_using_dd)
+
+## traceroute 
+
+3. [traceroute](https://github.com/openbsd/src/blob/master/usr.sbin/traceroute/traceroute.c)
+* Tracks steps or hops between the source computer and the ip/url entered. Sends three packets to each computer and measures return time. 
+* Language - C
+* Authors - Linux/OpenBSD
+
+### Install
+
+```Bash
+$ sudo apt install traceroute	#Debian/Ubuntu
+$ sudo yum install traceroute	#RHEL/CentOS
+$ sudo dnf install traceroute	#Fedora 22+ 
+```
+
+### Usage
+
+1. Run a traceroute to the server url or ip in question
+
+```Bash
+traceroute 8.8.8.8
+```
+
+2. Oberve and track path. The output will resemble the following:
+
+
+3. The key to track this output:
+
+| Hop #        |Name/IP Address | RTT 1 (round trip time)| RTT 2     | RTT 3    |
+| -------------|----------------|------------------------|-----------|----------|
+| 1            | 174.111.103.xx | 44.904 ms              | 44.885 ms | 44.855 ms      
+
+* Hop number - hop along the route, in this case the first hop
+* Domain/IP - IP address or domain of the router. Can appear as * * * if router will not reveal itself
+* RTT columns - Display round trip time (RTT) for the packet to reach router and return to your computer. Listed in three columns and sent three times to guage consistency. Look for wildly different times when looking for problems. 
+
+### Pros
+* Likely to be already installed
+
+### Cons 
+* Typically difficult to act on knowledge if hops are in a network outside of your control. 
+
+### Reference
+* More [detail](https://www.inmotionhosting.com/support/website/how-to/read-traceroute)
