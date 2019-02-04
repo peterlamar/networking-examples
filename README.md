@@ -1,5 +1,5 @@
 # Network Tools
-Documentation on network tools useful for quick performance analysis by ordinary developers. These tools are for diagnosising network issues between two servers that you suspect there may be a problem at. 
+Documentation on network tools useful for quick performance analysis by ordinary developers. These area curated set of common tools for diagnosising network issues between two servers that you suspect there may be a problem at. 
 
 ### Throughput 
 - i.e. how much data can get there and how much gets lost? 
