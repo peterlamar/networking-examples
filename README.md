@@ -2,7 +2,7 @@
 Documentation on network tools useful for quick performance analysis by ordinary developers. 
 
 1. [iperf3](#iperf3)
-2. [dd/Netcat](#dd/Netcat)
+2. [dd-Netcat](#dd-Netcat)
 
 ## iperf3 
 
@@ -46,7 +46,7 @@ iperf3 -c <server ip>
 * Man [page](https://fasterdata.es.net/performance-testing/network-troubleshooting-tools/iperf/)
 
 
-## dd/Netcat 
+## dd-Netcat 
 
 2. dd & Netcat
 * Copies data between two servers and measures data transfered
