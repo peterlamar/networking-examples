@@ -4,6 +4,7 @@ Documentation on network tools useful for performance analysis
 ## Tools 
 
 1. [iperf3](https://github.com/esnet/iperf)
+* Traditional network tool used to examine network throughput performance between two servers. When run, it returns data transfered, bandwidth, packet loss and related statistics over a TCP connection. 
 * Language - C
 * Authors - Esnet @ Berkely
 
