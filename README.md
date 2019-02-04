@@ -123,7 +123,7 @@ traceroute 8.8.8.8
 
 2. Oberve and track path. The output will resemble the following:
 
-![traceroute](https://github.com/peterlamar/network-performance-tools/blob/master/img/traceroute.png)
+![traceroute](https://github.com/peterlamar/network-performance-tools/blob/master/img/traceroute2.png)
 
 3. The key to track this output:
 
