@@ -41,3 +41,50 @@ iperf3 -c <server ip>
 ### Reference
 * Advanced [usage](https://www.tecmint.com/test-network-throughput-in-linux/)
 * Man [page](https://fasterdata.es.net/performance-testing/network-troubleshooting-tools/iperf/)
+
+
+## Tools 
+
+2. dd & Netcat
+* Copies data between two servers and returns data measured
+
+
+### Install
+
+dd typically comes installed in Linux
+
+```Bash
+$ sudo apt install netcat	#Debian/Ubuntu
+$ sudo yum install netcat	#RHEL/CentOS
+$ sudo dnf install netcat	#Fedora 22+ 
+```
+
+### Usage
+
+1. Start an netcat server in the suspected machine 
+
+```Bash
+nc -v -l 2222 > /dev/null
+```
+
+2. Connect to the server FROM your laptop or some other client and observe network performance statistics
+
+```Bash
+dd if=/dev/zero bs=1024K count=512 | nc -v <server ip> 2222
+```
+
+3. Observe file transfered. I had to interrupt transfer with Control C due to slow speed
+
+```Bash
+27262976 bytes (27 MB, 26 MiB) copied, 53.4426 s, 510 kB/s
+```
+
+### Pros
+* More likely to be installed already
+
+### Cons 
+* Limited in functionality, truly basic test. 
+
+### Reference
+* Difference between GNU and BSD [netcat](https://www.quora.com/What-is-the-difference-between-the-openBSD-netcat-and-the-GNU-netcat)
+* Linux IO with [dd](https://www.thomas-krenn.com/en/wiki/Linux_I/O_Performance_Tests_using_dd)
