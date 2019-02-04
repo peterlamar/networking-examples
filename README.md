@@ -11,6 +11,7 @@ Documentation on network tools useful for quick performance analysis by ordinary
 - i.e. is there a route from x to y and what are the stops between them?
 
 3. [traceroute](#traceroute) - Tracks all computers between two locations and measures round trip of three packets to each
+4. [mtr](#mtr) - Sends packets to all computers between two locations and reports lost percentage and statistics on packet round trip times
 
 ## iperf3 
 
@@ -145,3 +146,45 @@ traceroute 8.8.8.8
 
 ### Reference
 * More [detail](https://www.inmotionhosting.com/support/website/how-to/read-traceroute)
+
+## mtr 
+
+3. [mtr](https://github.com/traviscross/mtr)
+* Sends packets to all computers between two locations and reports lost percentage and statistics on packet round trip times. Typically one must perform a mtr from both computers (A -> B) and (B -> A) to observe where packets are being dropped. 
+* Language - C
+* Authors - https://github.com/traviscross
+
+### Install
+
+```Bash
+$ sudo apt install mtr-tiny	#Debian/Ubuntu
+$ sudo yum install mtr	#RHEL/CentOS
+$ sudo dnf install mtr	#Fedora 22+ 
+```
+
+### Usage
+
+1. Run a mtr to the server url or ip in question. MTR will continue to run unless control-C is pressed. 
+
+```Bash
+mtr 8.8.8.8
+```
+
+2. Alternatively, a report can be generated
+
+```Bash
+mtr --report 8.8.8.8
+```
+
+which will resemble the following:
+
+![mtr](https://github.com/peterlamar/network-performance-tools/blob/master/img/mtr.png)
+
+### Pros
+* Great statistics on network performance
+
+### Cons 
+* Typically have to install on destination servers
+
+### Reference
+* More [detail](https://www.linode.com/docs/networking/diagnostics/diagnosing-network-issues-with-mtr/#network-diagnostics-background)
