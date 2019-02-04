@@ -12,6 +12,7 @@ Documentation on network tools useful for quick performance analysis by ordinary
 
 3. [traceroute](#traceroute) - Tracks all computers between two locations and measures round trip of three packets to each
 4. [mtr](#mtr) - Sends packets to all computers between two locations and reports lost percentage and statistics on packet round trip times
+4. [ping](#ping) - Simple tool that sends packets to a remote host and reports round trip time for packets sent. 
 
 ## iperf3 
 
@@ -149,7 +150,7 @@ traceroute 8.8.8.8
 
 ## mtr 
 
-3. [mtr](https://github.com/traviscross/mtr)
+4. [mtr](https://github.com/traviscross/mtr)
 * Sends packets to all computers between two locations and reports lost percentage and statistics on packet round trip times. Typically one must perform a mtr from both computers (A -> B) and (B -> A) to observe where packets are being dropped. 
 * Language - C
 * Authors - https://github.com/traviscross
@@ -188,3 +189,42 @@ which will resemble the following:
 
 ### Reference
 * More [detail](https://www.linode.com/docs/networking/diagnostics/diagnosing-network-issues-with-mtr/#network-diagnostics-background)
+
+## ping 
+
+5. [ping](https://github.com/iputils/iputils)
+* Simple tool that sends packets to a remote host and reports round trip time for packets sent. You will have to hit control+c to interrupt the process when you are done with the results. 
+* Language - C
+* Authors - Linux
+
+### Install
+
+Ping should typically be installed
+
+```Bash
+$ sudo apt install iputils-ping	#Debian/Ubuntu
+$ sudo yum install iputils	#RHEL/CentOS
+$ sudo dnf install iputils	#Fedora 22+ 
+```
+
+### Usage
+
+1. Run a ping to the server url or ip in question. Ping will continue to run unless control-C is pressed. 
+
+```Bash
+ping 8.8.8.8
+```
+
+which will resemble the following:
+
+![ping](https://github.com/peterlamar/network-performance-tools/blob/master/img/ping.png)
+
+### Pros
+* Lets you know if a server is reachable and what the round time is for a packet
+
+### Cons 
+* Very basic information and more detail is often needed
+
+### Reference
+* More [detail](https://www.linode.com/docs/tools-reference/linux-system-administration-basics/#the-ping-command)
+
