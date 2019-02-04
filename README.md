@@ -1,5 +1,5 @@
 # network-performance-tools
-Documentation on network tools useful for performance analysis
+Documentation on network tools useful for performance analysis by ordinary developers. 
 
 ## Tools 
 
