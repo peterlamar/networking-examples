@@ -4,13 +4,13 @@ Documentation on network tools useful for quick performance analysis by ordinary
 ## Throughput 
 - i.e. how much data can get there and does any of it get lost? 
 
-1. [iperf3](#iperf3)
-2. [dd Netcat](#dd-Netcat)
+1. [iperf3](#iperf3) - Creates client/server between two network computers and measures throughput
+2. [dd Netcat](#dd-Netcat) - Copies files between two network computers and measures file transfer (throughput)
 
 ## Connectivity 
 - i.e. is there a route from x to y and what are the stops between them?
 
-3. [traceroute](#traceroute)
+3. [traceroute](#traceroute) - Tracks all computers between two locations and measures round trip of three packets to each
 
 ### iperf3 
 
