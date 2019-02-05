@@ -1,6 +1,8 @@
 # Overview
 Documentation on network tools useful for quick performance analysis by ordinary developers. These area curated set of common tools for diagnosising network issues between two servers that you suspect there may be a problem at. 
 
+These tools are directional, so the results x->y is typically different than y->x. Ideally these tools are performed on both x->y and y->x for a proper analysis. 
+
 ### Throughput 
 - How much data can get there and how much gets lost? What is the network speed between two points?
 
