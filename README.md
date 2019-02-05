@@ -8,7 +8,7 @@ Documentation on network tools useful for quick performance analysis by ordinary
 2. [dd Netcat](#dd-Netcat) - Copies files between two network computers and measures file transfer (throughput)
 
 ### Connectivity 
-- i.e. is there a route from x to y and what are the stops between them? Any issues between x and y?
+- i.e. is there a route from x to y and what are the stops between them? What path is taken and is there an issue inside or outside of the network?
 
 3. [traceroute](#traceroute) - Tracks all computers between two locations and measures round trip of three packets to each
 4. [mtr](#mtr) - Sends packets to all computers between two locations and reports lost percentage and statistics on packet round trip times
