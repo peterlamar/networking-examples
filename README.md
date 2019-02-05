@@ -153,7 +153,7 @@ traceroute 8.8.8.8
 ## mtr 
 
 4. [mtr](https://github.com/traviscross/mtr)
-* Sends packets to all computers between two locations and reports lost percentage and statistics on packet round trip times. Typically one must perform a mtr from both computers (A -> B) and (B -> A) to observe where packets are being dropped. 
+* Combines traceroute and ping. Sends packets to all computers between two locations and reports lost percentage and statistics on packet round trip times. Typically one must perform a mtr from both computers (A -> B) and (B -> A) to observe where packets are being dropped. 
 * Language - C
 * Authors - https://github.com/traviscross
 
