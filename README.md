@@ -1,4 +1,4 @@
-# Network Tools
+# Overview
 Documentation on network tools useful for quick performance analysis by ordinary developers. These area curated set of common tools for diagnosising network issues between two servers that you suspect there may be a problem at. 
 
 ### Throughput 
@@ -13,6 +13,8 @@ Documentation on network tools useful for quick performance analysis by ordinary
 3. [traceroute](#traceroute) - Tracks all computers between two locations and measures round trip of three packets to each
 4. [mtr](#mtr) - Sends packets to all computers between two locations and reports lost percentage and statistics on packet round trip times
 4. [ping](#ping) - Simple tool that sends packets to a remote host and reports round trip time for packets sent. 
+
+# Tools
 
 ## iperf3 
 
