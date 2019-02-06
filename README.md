@@ -12,9 +12,11 @@ These tools are directional, so the results x->y is typically different than y->
 ### Connectivity 
 - Is there a route from x to y and what are the stops between them? What path is taken and is there an issue inside or outside of the network?
 
-3. [traceroute](#traceroute) - Tracks all computers between two locations and measures round trip of three packets to each
-4. [mtr](#mtr) - Sends packets to all computers between two locations and reports lost percentage and statistics on packet round trip times
-4. [ping](#ping) - Simple tool that sends packets to a remote host and reports round trip time for packets sent. 
+3. [traceroute](#traceroute) - Tracks all computers (typically routers) between two locations and measures round trip of sending three packets to each one
+4. [mtr](#mtr) - Sends packets to all computers (typically routers) between two locations and reports packet loss and round trip statistics. Considered a combination of ping and traceroute. 
+4. [ping](#ping) - Simple tool that sends packets to a remote host and reports round trip time for packets sent to that host. 
+
+Note: These methods are more effective with the public internet. For example, internal networks that use MPLS (Multi Protocol Label Switching) do not play well with traceroutes and by design, traceroutes can not see each path while traversing them.
 
 # Tools
 
