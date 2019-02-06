@@ -1,5 +1,5 @@
 # Overview
-Documentation on network tools useful for quick performance analysis by ordinary developers. These area curated set of common tools for diagnosising network issues between two servers that you suspect there may be a problem at. 
+Documentation on network tools useful for quick performance analysis by ordinary developers. These are the some of the tools a network engineer may ask you to perform first when reporting an issue. These area curated set of common tools for diagnosising network issues between two servers that you suspect there may be a problem at. 
 
 These tools are directional, so the results x->y is typically different than y->x. Ideally these tools are performed on both x->y and y->x for a proper analysis. 
 
