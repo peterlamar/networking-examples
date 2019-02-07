@@ -16,7 +16,7 @@ These tools are directional, so the results x->y is typically different than y->
 4. [mtr](#mtr) - Sends packets to all computers (typically routers) between two locations and reports packet loss and round trip statistics. Considered a combination of ping and traceroute. 
 4. [ping](#ping) - Simple tool that sends packets to a remote host and reports round trip time for packets sent to that host. 
 
-Note: These methods are more effective with the public internet. For example, internal networks that use MPLS (Multi Protocol Label Switching) do not play well with traceroutes and by design, traceroutes can not see each path while traversing them.
+Note: These methods are more effective with the public internet than internal networks. For example, internal networks that use MPLS (Multi Protocol Label Switching) do not play well with traceroutes and by design, traceroutes can not see each path while traversing them and will return * * * as results.
 
 # Tools
 
