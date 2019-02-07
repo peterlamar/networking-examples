@@ -20,6 +20,16 @@ These tools are directional, so the results x->y is typically different than y->
 
 1. These methods are more effective with the public internet than internal networks. For example, internal networks that use MPLS (Multi Protocol Label Switching) do not play well with traceroutes and by design, traceroutes can not see each path while traversing them and will return * * * as results.
 
+example:
+
+ 1  router1  4.261 ms  4.184 ms  5.198 ms
+ 
+ 2  * * *
+ 
+ 3  * * *
+ 
+ 4  * * *
+
 2. Sometimes a single device may show packet loss. This is potentially not true packet loss, but 'superficial' packet loss, as the loss does not continue down on each hop, but is isolated to a single device. 
 True packet loss will begin at one hop, and not only occur at each hope down to the end destination but will increase at each hop as well. So again, as long as these drops are isolated to the one device and not consistent across all subsequent hops, then what is observed is most likely a symptom of ICMP being deprioritized (superficial) by that one router for more important transit traffic. 
 
