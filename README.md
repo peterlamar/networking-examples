@@ -16,7 +16,21 @@ These tools are directional, so the results x->y is typically different than y->
 4. [mtr](#mtr) - Sends packets to all computers (typically routers) between two locations and reports packet loss and round trip statistics. Considered a combination of ping and traceroute. 
 4. [ping](#ping) - Simple tool that sends packets to a remote host and reports round trip time for packets sent to that host. 
 
-Note: These methods are more effective with the public internet than internal networks. For example, internal networks that use MPLS (Multi Protocol Label Switching) do not play well with traceroutes and by design, traceroutes can not see each path while traversing them and will return * * * as results.
+#### Misc observations with traceroute and mtr
+
+1. These methods are more effective with the public internet than internal networks. For example, internal networks that use MPLS (Multi Protocol Label Switching) do not play well with traceroutes and by design, traceroutes can not see each path while traversing them and will return * * * as results.
+
+2. Sometimes a single device may show packet loss. This is potentially not true packet loss, but 'superficial' packet loss, as the loss does not continue down on each hop, but is isolated to a single device. 
+True packet loss will begin at one hop, and not only occur at each hope down to the end destination but will increase at each hop as well. So again, as long as these drops are isolated to the one device and not consistent across all subsequent hops, then what is observed is most likely a symptom of ICMP being deprioritized (superficial) by that one router for more important transit traffic. 
+
+example:
+              Loss% Snt Last Avg Best Wrst StDev
+              
+3.|-- router3 0.0% 10 0.8 0.6 0.5 0.8 0.0
+
+4.|-- router4 80.0% 10 4.7 3.7 2.7 4.7 1.4 <-
+
+5.|-- router5 0.0% 10 1.0 1.1 1.0 1.2 0.0
 
 # Tools
 
