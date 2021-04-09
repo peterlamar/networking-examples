@@ -15,6 +15,7 @@ These tools are directional, so the results x->y is typically different than y->
 3. [traceroute](#traceroute) - Tracks all computers (typically routers) between two locations and measures round trip of sending three packets to each one
 4. [mtr](#mtr) - Sends packets to all computers (typically routers) between two locations and reports packet loss and round trip statistics. Considered a combination of ping and traceroute. 
 4. [ping](#ping) - Simple tool that sends packets to a remote host and reports round trip time for packets sent to that host. 
+5. [nc](#nc) - Check if ip and ports are open and available for traffic
 
 #### Misc observations with traceroute and mtr
 
@@ -258,3 +259,20 @@ which will resemble the following:
 ### Reference
 * More [detail](https://www.linode.com/docs/tools-reference/linux-system-administration-basics/#the-ping-command)
 
+## NC
+
+### Usage
+
+```
+nc -z -v [hostname/IP address] [port number]
+```
+
+Example
+
+```
+nc -z -v 192.168.10.12 22
+Connection to 192.118.20.95 22 port [tcp/ssh] succeeded!
+```
+
+### Reference
+* More [detail](https://www.thegeekdiary.com/how-to-test-porttcp-udp-connectivity-from-a-linux-server/)
